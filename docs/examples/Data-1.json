@@ -1,0 +1,99 @@
+{
+  "citizens": [
+    {
+      "bsn": "569628132",
+      "basicHealthInsurance": {
+        "asFromDate": "2025-01-01T00:00:00.000Z",
+        "tillDate": "2026-01-01T00:00:00.000Z"
+      },
+      "supplementaryHealthInsurances": [
+        {
+          "asFromDate": "2025-01-01T00:00:00.000Z",
+          "tillDate": "2026-01-01T00:00:00.000Z",
+          "whatIsCovered": "Dentist",
+          "percentageCovered": 80,
+          "maxAmount": 120
+        },
+        {
+          "asFromDate": "2025-01-01T00:00:00.000Z",
+          "tillDate": "2026-01-01T00:00:00.000Z",
+          "whatIsCovered": "Glasses",
+          "percentageCovered": 25,
+          "maxAmount": 100
+        }
+      ]
+    },
+    {
+      "bsn": "806758911",
+      "basicHealthInsurance": {
+        "asFromDate": "2025-01-01T00:00:00.000Z",
+        "tillDate": "2026-01-01T00:00:00.000Z"
+      }
+    },
+    {
+      "bsn": "266163192",
+      "basicHealthInsurance": {
+        "asFromDate": "2025-01-01T00:00:00.000Z",
+        "tillDate": "2026-01-01T00:00:00.000Z"
+      }
+    },
+    {
+      "bsn": "375014033",
+      "basicHealthInsurance": {
+        "asFromDate": "2025-01-01T00:00:00.000Z",
+        "tillDate": "2026-01-01T00:00:00.000Z"
+      },
+      "supplementaryHealthInsurances": [
+        {
+          "asFromDate": "2025-01-01T00:00:00.000Z",
+          "tillDate": "2026-01-01T00:00:00.000Z",
+          "whatIsCovered": "Dentist",
+          "percentageCovered": 80,
+          "maxAmount": 120
+        },
+        {
+          "asFromDate": "2025-01-01T00:00:00.000Z",
+          "tillDate": "2026-01-01T00:00:00.000Z",
+          "whatIsCovered": "Glasses",
+          "percentageCovered": 25,
+          "maxAmount": 100
+        }
+      ]
+    },
+    {
+      "bsn": "434676756",
+      "basicHealthInsurance": {
+        "asFromDate": "2025-01-01T00:00:00.000Z",
+        "tillDate": "2026-01-01T00:00:00.000Z"
+      },
+      "supplementaryHealthInsurances": [
+        {
+          "asFromDate": "2025-01-01T00:00:00.000Z",
+          "tillDate": "2026-01-01T00:00:00.000Z",
+          "whatIsCovered": "vaccinations",
+          "percentageCovered": 100,
+          "maxAmount": 150
+        }
+      ]
+    },
+    {
+      "bsn": "021729993",
+      "basicHealthInsurance": {
+        "asFromDate": "2025-01-01T00:00:00.000Z",
+        "tillDate": "2025-01-04T00:00:00.000Z"
+      }
+    },
+    {
+      "bsn": "418099614",
+      "supplementaryHealthInsurances": [
+        {
+          "asFromDate": "2025-01-01T00:00:00.000Z",
+          "tillDate": "2026-01-01T00:00:00.000Z",
+          "whatIsCovered": "vaccinations",
+          "percentageCovered": 100,
+          "maxAmount": 150
+        }
+      ]
+    }
+  ]
+}

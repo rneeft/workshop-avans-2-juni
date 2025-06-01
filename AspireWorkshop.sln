@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36109.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8A4D3350-DF76-4F6E-8CE4-50737B0FF4C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsuranceDetails.Api", "src\InsuranceDetails.Api\InsuranceDetails.Api.csproj", "{0368BB85-7C03-26D1-9F76-7D079D5096E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{34ECAFF1-6FB4-417E-B3F3-012138DBDEDE}"
+	ProjectSection(SolutionItems) = preProject
+		docs\postman_collection.json = docs\postman_collection.json
+		docs\examples\Data-1.json = docs\examples\Data-1.json
+		docs\examples\Data-2.json = docs\examples\Data-2.json
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0368BB85-7C03-26D1-9F76-7D079D5096E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0368BB85-7C03-26D1-9F76-7D079D5096E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0368BB85-7C03-26D1-9F76-7D079D5096E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0368BB85-7C03-26D1-9F76-7D079D5096E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0368BB85-7C03-26D1-9F76-7D079D5096E7} = {8A4D3350-DF76-4F6E-8CE4-50737B0FF4C1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CD9C95BA-BEB3-4992-8560-B92F29665C40}
+	EndGlobalSection
+EndGlobal

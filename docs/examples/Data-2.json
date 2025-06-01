@@ -1,0 +1,53 @@
+{
+  "citizens": [
+    {
+      "bsn": "569628132",
+      "supplementaryHealthInsurances": [
+        {
+          "asFromDate": "2025-01-01T00:00:00.000Z",
+          "tillDate": "2026-01-01T00:00:00.000Z",
+          "whatIsCovered": "vaccinations",
+          "percentageCovered": 80,
+          "maxAmount": 120
+        }
+      ]
+    },
+    {
+      "bsn": "940776365",
+      "basicHealthInsurance": {
+        "asFromDate": "2025-01-01T00:00:00.000Z",
+        "tillDate": "2026-01-01T00:00:00.000Z"
+      },
+      "supplementaryHealthInsurances": [
+        {
+          "asFromDate": "2025-01-01T00:00:00.000Z",
+          "tillDate": "2026-01-01T00:00:00.000Z",
+          "whatIsCovered": "Dentist Plus",
+          "percentageCovered": 90,
+          "maxAmount": 1000
+        },
+        {
+          "asFromDate": "2025-01-01T00:00:00.000Z",
+          "tillDate": "2026-01-01T00:00:00.000Z",
+          "whatIsCovered": "Glasses",
+          "percentageCovered": 25,
+          "maxAmount": 100
+        }
+      ]
+    },
+    {
+      "bsn": "021729993",
+      "basicHealthInsurance": {
+        "asFromDate": "2025-01-05T00:00:00.000Z",
+        "tillDate": "2026-01-01T00:00:00.000Z"
+      }
+    },
+    {
+      "bsn": "418099614",
+      "basicHealthInsurance": {
+        "asFromDate": "2025-01-01T00:00:00.000Z",
+        "tillDate": "2026-01-01T00:00:00.000Z"
+      }
+    }
+  ]
+}
