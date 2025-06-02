@@ -13,6 +13,7 @@ using InsuranceDetails.Api.Logging;
 using InsuranceDetails.Api.Searching;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.AddServiceDefaults();
 
 builder.Services.AddOpenApi();
 
@@ -37,6 +38,7 @@ builder.Services
     .AddDataFileService();
 
 var app = builder.Build();
+app.MapDefaultEndpoints();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
