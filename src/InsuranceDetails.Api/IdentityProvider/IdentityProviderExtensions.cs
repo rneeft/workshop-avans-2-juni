@@ -1,5 +1,3 @@
-using InsuranceDetails.Api.Identity;
-
 namespace InsuranceDetails.Api.IdentityProvider;
 
 public static class IdentityProviderExtensions
