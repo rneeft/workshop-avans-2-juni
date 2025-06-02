@@ -48,12 +48,3 @@ CREATE TABLE BasicHealthInsurance (
     CONSTRAINT FK_BasicHealthInsurance_Citizen FOREIGN KEY (CitizenId) REFERENCES Citizen(Id),
     CONSTRAINT FK_BasicHealthInsurance_HealthInsurer FOREIGN KEY (HealthInsurerId) REFERENCES HealthInsurer(Id)
 );
-
-IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='User')
-CREATE TABLE [User] (
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    Name NVARCHAR(MAX) NOT NULL,
-    Email NVARCHAR(MAX) NOT NULL,
-    PasswordHash NVARCHAR(MAX) NOT NULL,
-    Salt VARBINARY(MAX) NOT NULL
-);

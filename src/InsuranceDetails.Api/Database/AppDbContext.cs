@@ -9,7 +9,6 @@ public class AppDbContext  : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<HealthInsurer>().ToTable("HealthInsurer");
-        modelBuilder.Entity<User>().ToTable("User");
         modelBuilder.Entity<Citizen>().ToTable("Citizen");
         modelBuilder.Entity<BasicHealthInsurance>().ToTable("BasicHealthInsurance");
         modelBuilder.Entity<SupplementaryHealthInsurance>().ToTable("SupplementaryHealthInsurance");
@@ -22,8 +21,6 @@ public class AppDbContext  : DbContext
 
     public DbSet<HealthInsurer> HealthInsurers { get; set; }
     
-    public DbSet<User> Users { get; set; }
-
     public DbSet<Citizen> Citizens { get; set; }
     
     public DbSet<BasicHealthInsurance> BasicHealthInsurances { get; set; }

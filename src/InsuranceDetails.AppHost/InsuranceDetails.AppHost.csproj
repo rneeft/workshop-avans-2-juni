@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\InsuranceDetails.Api.IdentityProvider\InsuranceDetails.Api.IdentityProvider.csproj" />
     <ProjectReference Include="..\InsuranceDetails.Api\InsuranceDetails.Api.csproj" />
   </ItemGroup>
 

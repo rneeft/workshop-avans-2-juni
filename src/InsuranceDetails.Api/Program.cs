@@ -8,7 +8,6 @@ using System.Security.Claims;
 using System.Text;
 using InsuranceDetails.Api.DataFiles;
 using FluentValidation;
-using InsuranceDetails.Api.IdentityProvider;
 using InsuranceDetails.Api.Logging;
 using InsuranceDetails.Api.Searching;
 
@@ -30,7 +29,6 @@ DatabaseInitialisation.CreateTheDatabase(connectionString, "InsuranceDetails.Api
 builder.Services
     .AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString))
     .AddAuthenticationAndAuthorisation(builder.Configuration)
-    .AddIdentityProviderServices(builder.Configuration)
     .AddLoggingServices()
     .AddSearchServices()
     .AddValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssemblies())
@@ -53,7 +51,6 @@ app.MapGet("/liveness", () => Results.Ok("Liveness check OK"));
 app.MapGet("/readiness", () => Results.Ok("Readiness check OK"));
 
 app
-    .MapIdentityProviderEndpoints()
     .MapHealthInsurerEndpoints()
     .MapDataFileEndpoints()
     .MapSearchEndpoints();
