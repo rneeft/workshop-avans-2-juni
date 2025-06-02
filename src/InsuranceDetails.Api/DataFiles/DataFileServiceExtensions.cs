@@ -4,7 +4,7 @@ public static class DataFileServiceExtensions
 {
     public static IServiceCollection AddDataFileService(this IServiceCollection services)
     {
-        services.AddScoped<IDataFileService, DataFileService>();
+        services.AddScoped<IDataFileService, NServiceBusDataFileService>();
 
         return services;
     }

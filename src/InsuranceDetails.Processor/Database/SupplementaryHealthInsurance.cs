@@ -1,6 +1,5 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using InsuranceDetails.Api.HealthInsurers;
 
 namespace InsuranceDetails.Api.Database;
 
@@ -23,6 +22,5 @@ public class SupplementaryHealthInsurance
     public required int PercentageCovered { get; set; }
     public required int MaxAmount { get; set; }
     
-    public required HealthInsurer HealthInsurer { get; set; }
     public required Citizen Citizen { get; set; }
 }

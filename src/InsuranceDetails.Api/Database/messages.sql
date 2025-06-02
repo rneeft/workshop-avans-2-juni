@@ -9,7 +9,6 @@ IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Audit')
         [Body] [varbinary](max) NULL,
         [RowVersion] [bigint] IDENTITY(1,1) NOT NULL
         ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-        GO
 
 IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Error')
     CREATE TABLE [Error](
@@ -22,7 +21,6 @@ IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Error')
         [Body] [varbinary](max) NULL,
         [RowVersion] [bigint] IDENTITY(1,1) NOT NULL
         ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-        GO
 
 IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Subscription')
     CREATE TABLE [Subscription](
@@ -34,7 +32,6 @@ IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Subscription')
         [Topic] ASC
         )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
     ) ON [PRIMARY]
-    GO
 
 IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='DataFileProcessorEndpoint')
 BEGIN

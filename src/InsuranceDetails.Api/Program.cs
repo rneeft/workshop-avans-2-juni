@@ -10,6 +10,7 @@ using InsuranceDetails.Api.DataFiles;
 using FluentValidation;
 using InsuranceDetails.Api.Logging;
 using InsuranceDetails.Api.Searching;
+using InsuranceDetails.Messages.Commands;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.AddServiceDefaults();
@@ -25,6 +26,8 @@ var connectionString = builder.Configuration.GetConnectionString("InsuranceDetai
 
 DatabaseCreation.MakeSureDatabaseExist(connectionString);
 DatabaseInitialisation.CreateTheDatabase(connectionString, "InsuranceDetails.Api.Database.sql-create.sql");
+
+AddNServiceBus(builder);
 
 builder.Services
     .AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString))
@@ -58,3 +61,31 @@ app
 app.UseHttpsRedirection();
 
 app.Run();
+
+
+static void AddNServiceBus(WebApplicationBuilder builder)
+{
+    var connectionString = builder.Configuration.GetConnectionString("MessagesDb") ?? 
+                           throw new InvalidOperationException("No connection string configured");
+    
+    DatabaseInitialisation.CreateTheDatabase(connectionString, "InsuranceDetails.Api.Database.messages.sql");
+
+    var endpointConfiguration = new EndpointConfiguration("DataFileUploadEndpoint");
+    endpointConfiguration.UseSerialization<SystemJsonSerializer>();
+    endpointConfiguration.SendOnly();
+
+    var transport = endpointConfiguration.UseTransport<SqlServerTransport>()
+        .ConnectionString(connectionString)
+        .DefaultSchema("dbo")
+        .Transactions(TransportTransactionMode.SendsAtomicWithReceive);
+
+    var delayedDelivery = transport.NativeDelayedDelivery();
+    delayedDelivery.TableSuffix("Delayed");
+
+    var routing = transport.Routing();
+    routing.RouteToEndpoint(typeof(UpdateSupplementaryHealthInsuranceCommand), "DataFileProcessorEndpoint");
+    routing.RouteToEndpoint(typeof(UpdateBasicHealthInsuranceCommand), "DataFileProcessorEndpoint");
+
+    builder.UseNServiceBus(endpointConfiguration);
+}
+

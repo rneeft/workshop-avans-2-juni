@@ -20,5 +20,4 @@ public class BasicHealthInsurance
     public required DateTime TillDate { get; set; }
     
     public Citizen Citizen { get; set; }
-    public HealthInsurer HealthInsurer { get; set; }
 }
